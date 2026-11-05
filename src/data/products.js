@@ -251,3 +251,4 @@ export const LOCATIONS = [
     phone: '+1 (555) 671-2299'
   }
 ];
+
