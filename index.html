@@ -28,11 +28,11 @@ header{position:fixed;top:0;width:100%;height:84px;background:#fff;z-index:100;b
 header.s{height:68px;box-shadow:0 8px 30px rgba(40,10,90,.12)}
 header .wrap{height:100%;display:flex;align-items:center;gap:32px;max-width:1250px}
 .logo img{width:125px;height:50px;object-fit:contain}
-.search{display:flex;align-items:center;gap:10px;width:294px;height:42px;border:1px solid #e8e3f1;border-radius:12px;padding:0 16px;font-size:13px;color:#8b869b;background:#faf9fd}
 nav{display:flex;gap:21px;font-size:12.5px;margin-left:auto;white-space:nowrap}
 nav a{position:relative;color:#5a556d}
 nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:100%;height:2px;background:var(--violet);transform:scaleX(0);transform-origin:right;transition:transform .45s var(--ease)}
 nav a:hover::after{transform:scaleX(1);transform-origin:left}
+.header-cta{height:48px;padding:0 22px;border-radius:12px;font-size:12px;white-space:nowrap;flex:none}
 .brand-logo-img{width:125px;height:50px;object-fit:contain}
 
 /* buttons */
@@ -44,9 +44,9 @@ nav a:hover::after{transform:scaleX(1);transform-origin:left}
 .btn:focus-visible,summary:focus-visible,.arrow:focus-visible,nav a:focus-visible{outline:3px solid var(--lilac);outline-offset:3px}
 
 /* hero */
-.hero{padding:208px 0 0}
-.hero .wrap{display:grid;grid-template-columns:1fr 1.12fr;gap:10px;align-items:start;max-width:1330px;padding:0 0 0 64px}
-.hero h1{font-size:clamp(40px,4.1vw,52px);line-height:1.04;font-weight:400;margin-top:26px;letter-spacing:-.03em}
+.hero{padding:160px 0 0}
+.hero .wrap{display:grid;grid-template-columns:minmax(550px, .78fr) minmax(0, 1fr);gap:10px;align-items:start;max-width:1330px;padding:0 0 0 64px}
+.hero h1{font-size:clamp(38px,3.1vw,46px);line-height:1.04;font-weight:400;margin-top:26px;letter-spacing:-.03em}
 .hero h1 .l{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
 .hero h1 .l>span{display:block;transform:translateY(112%);animation:up 1.1s var(--ease) forwards}
 .hero h1 .l:nth-child(2)>span{animation-delay:.12s}.hero h1 .l:nth-child(3)>span{animation-delay:.24s}
@@ -54,13 +54,14 @@ nav a:hover::after{transform:scaleX(1);transform-origin:left}
 @keyframes up{to{transform:none}}
 .fi{opacity:0;transform:translateY(18px);animation:fi 1s var(--ease) forwards}
 @keyframes fi{to{opacity:1;transform:none}}
-.hero .lead{font-size:17px;line-height:1.75;color:#6a657b;margin-top:26px;max-width:480px}
-.tagline{font-size:13px;font-weight:600;color:#5b21b6;margin-top:22px}
-.cta{display:flex;gap:27px;margin-top:38px}
-.note{display:flex;gap:9px;align-items:center;font-size:11px;color:#7a7590;margin-top:22px}
-.shot{position:relative;z-index:2;margin-top:-6px}
+.hero .lead{font-size:15px;line-height:1.7;color:#6a657b;margin-top:22px;max-width:460px}
+.hero .tagline{font-size:11.5px;font-weight:600;color:#5b21b6;margin-top:18px}
+.hero .cta{display:flex;gap:22px;margin-top:30px}
+.hero .cta .btn{height:44px;padding:0 17px;font-size:12px}
+.hero .note{display:flex;gap:9px;align-items:center;font-size:10px;color:#7a7590;margin-top:18px}
+.shot{position:relative;z-index:2;margin-top:-56px}
 .shot>img{width:100%;height:auto;object-fit:contain;opacity:0;transform:translateY(46px) scale(.95);animation:shot 1.5s .25s var(--ease) forwards}
-.shot>img.hero-glow{position:absolute;inset:-9% -8%;width:116%;height:118%;object-fit:cover;opacity:.48;transform:none;animation:none;z-index:0;pointer-events:none}.shot>img:not(.hero-glow){position:relative;z-index:2}
+.shot>img{position:relative;z-index:2;display:block;width:106%;max-width:none;height:auto;object-fit:contain}
 @keyframes shot{to{opacity:1;transform:none}}
 .chips{display:grid;grid-template-columns:repeat(4,262px);gap:49px;justify-content:center;margin-top:36px}
 .chip{display:flex;align-items:center;gap:14px;height:66px;padding:0 14px;border-radius:12px;border:2px solid #efeaf8;background:#fff;box-shadow:0 0 0 3px #f8f5fd}
@@ -74,22 +75,22 @@ nav a:hover::after{transform:scaleX(1);transform-origin:left}
 /* departments */
 .depts{padding:150px 0 0}
 .depts h2{margin-top:30px}.depts .sub{margin-top:24px}
-.grid{display:grid;grid-template-columns:repeat(5,203px);gap:93px 50px;justify-content:center;margin-top:68px}
-.dept{height:261px;border-radius:28px;padding:12px;background:var(--bg);position:relative;overflow:visible;z-index:0;transition:width .68s cubic-bezier(.25,.1,.25,1),height .68s cubic-bezier(.25,.1,.25,1),margin-right .68s cubic-bezier(.25,.1,.25,1),margin-bottom .68s cubic-bezier(.25,.1,.25,1),box-shadow .55s ease}
-.dept-photo{position:absolute;z-index:0;left:12px;top:12px;width:calc(100% - 24px);height:237px;border-radius:11px;overflow:hidden}
+.grid{display:grid;grid-template-columns:repeat(5,210px);gap:93px 50px;justify-content:center;margin-top:68px}
+.dept{height:270px;border-radius:23px;padding:14px;background:var(--bg);position:relative;overflow:visible;z-index:0;transition:width .68s cubic-bezier(.4,0,.2,1),height .68s cubic-bezier(.4,0,.2,1),margin-right .68s cubic-bezier(.4,0,.2,1),margin-bottom .68s cubic-bezier(.4,0,.2,1),box-shadow .55s ease}
+.dept-photo{position:absolute;z-index:0;left:14px;top:14px;width:calc(100% - 28px);height:242px;border-radius:13px;overflow:hidden}
 .dept .dept-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.dept .dept-art{position:absolute;z-index:1;inset:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;transition:transform .68s cubic-bezier(.75,0,.75,.9);transform:scale(1);transform-origin:center center;will-change:transform}
-.dept-info{position:absolute;z-index:2;left:12px;right:12px;bottom:12px;height:43px;padding:3px 39px 0 11px;border-radius:0 0 11px 11px;text-align:left;color:#281044;background:transparent;opacity:0;transform:translateY(5px);transition:opacity .24s ease .08s,transform .3s ease .08s;pointer-events:none}
+.dept .dept-art{position:absolute;z-index:1;inset:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;transition:transform .68s cubic-bezier(.4,0,.2,1);transform:scale(1);transform-origin:center center;will-change:transform}
+.dept-info{position:absolute;z-index:2;left:14px;right:14px;bottom:10px;height:46px;padding:0 39px 0 0;border-radius:0 0 11px 11px;text-align:left;color:#20142f;background:transparent;opacity:0;transform:translateY(5px);transition:opacity .3s cubic-bezier(.4,0,.2,1),transform .3s cubic-bezier(.4,0,.2,1);pointer-events:none}
 .dept-info b{display:block;font:500 14px/1.3 "Plus Jakarta Sans",sans-serif}.dept-info small{display:block;color:#81758c;font-size:9px;margin-top:4px}.dept-arrow{position:absolute;right:2px;top:1px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#7624cf;font-size:17px}
-.dept:hover,.dept:focus{width:calc(100% + 30px);height:313px;margin-left:0;margin-right:-30px;margin-bottom:-52px;z-index:5;box-shadow:0 14px 26px rgba(47,15,93,.12)}
-.dept:hover .dept-art,.dept:focus .dept-art{transform:scale(1.06);transition-timing-function:cubic-bezier(.25,.1,.25,1)}.dept:hover .dept-info,.dept:focus .dept-info{opacity:1;transform:none}
+.dept:hover,.dept:focus-visible{width:252px;height:324px;margin-left:0;margin-right:-42px;margin-bottom:-54px;z-index:5;box-shadow:0 14px 26px rgba(47,15,93,.12)}
+.dept:hover .dept-art,.dept:focus-visible .dept-art{transform:scale(1.2)}.dept:hover .dept-info,.dept:focus-visible .dept-info{opacity:1;transform:none}
 /* featured brands */
 .brands{padding:92px 0 72px}.brands h2{margin-top:26px}.brand-row{display:flex;justify-content:center;gap:38px;margin-top:42px}.brand-tile{width:235px;height:167px;border-radius:19px;overflow:hidden;transition:transform .5s var(--ease),box-shadow .5s}.brand-tile:hover{transform:translateY(-7px);box-shadow:0 20px 35px #26104426}.brand-tile img{width:100%;height:100%;object-fit:cover}
 
 /* personalization banner */
 .pers{position:relative;width:100vw;max-width:none;margin:130px 0 0 calc(50% - 50vw);height:668px;overflow:hidden;background:#2a0b55}
 .pers>img{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;object-position:center}
-.pers::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(62,27,110,.84) 0%,rgba(77,40,128,.76) 28%,rgba(77,40,128,0) 62%)}
+.pers::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(62,27,110,.60) 0%,rgba(77,40,128,.50) 28%,rgba(77,40,128,0) 62%)}
 .pers .in{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding-left:108px;max-width:1392px;margin:auto;color:#fff}
 .pers .eyebrow{color:#fff;letter-spacing:.14em}
 .pers h2{color:#fff;font-size:clamp(34px,3.4vw,46px);font-weight:400;margin:28px 0 22px;line-height:1.08}
@@ -156,6 +157,43 @@ nav a:hover::after{transform:scaleX(1);transform-origin:left}
 .acard p{font-size:11.5px;line-height:1.6;max-width:480px;color:#f0eef5}
 .acard .btn{margin-top:22px;height:48px;align-self:flex-start;color:var(--ink);border:0;font-weight:700}
 
+/* seller application */
+.seller{display:none;padding:96px 28px 84px;scroll-margin-top:84px;background:#fff}
+.seller-head{text-align:center;max-width:900px;margin:0 auto}
+.seller-head .eyebrow{justify-content:center}
+.seller-head h2{margin-top:24px;font-size:clamp(32px,3.2vw,40px);font-weight:400}
+.seller-head p{margin-top:22px;font-size:14px;color:#777187}
+.seller-form-wrap{max-width:920px;margin:66px auto 0}
+.seller-form-wrap h3{font-size:26px;font-weight:400;letter-spacing:-.025em;color:var(--ink)}
+.seller-form-wrap .intro{font-size:12px;color:#817b8e;margin-top:10px}
+.seller-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 28px;margin-top:54px}
+.seller-field{min-width:0;display:flex;flex-direction:column;gap:9px}
+.seller-field.wide{grid-column:1/-1}
+.seller-field label,.seller-field .label{font-size:10px;font-weight:700;color:#30263e}
+.seller-field label i{font-style:normal;color:#e84b75}
+.seller-field input,.seller-field select,.seller-field textarea{width:100%;border:1px solid #e2dce9;border-radius:12px;background:#fff;color:#332944;font:400 12px Inter,system-ui,sans-serif;padding:0 16px;outline:none;transition:border-color .2s,box-shadow .2s}
+.seller-field input,.seller-field select{height:52px}
+.seller-field textarea{min-height:104px;padding:15px 16px;resize:vertical}
+.seller-field input::placeholder,.seller-field textarea::placeholder{color:#a19baa}
+.seller-field input:focus,.seller-field select:focus,.seller-field textarea:focus{border-color:#9d6be1;box-shadow:0 0 0 3px #7c3aed17}
+.seller-field .hint{font-size:9px;color:#9a94a5;margin-top:-2px}
+.seller-upload{background:#f4eefb;border-radius:16px;padding:20px}
+.seller-upload-head{display:flex;align-items:center;gap:14px}
+.seller-upload-icon{width:42px;height:42px;border-radius:12px;background:#fff;display:grid;place-items:center;color:var(--violet);font-size:20px}
+.seller-upload-head b{display:block;font-size:12px;font-weight:500;color:#30263e}
+.seller-upload-head small{display:block;font-size:9px;color:#938c9d;margin-top:5px}
+.seller-upload .label{display:block;margin:18px 0 10px}
+.seller-drop{position:relative;min-height:126px;border:1px dashed #d9c8ed;border-radius:13px;background:rgba(255,255,255,.55);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;color:var(--violet);cursor:pointer}
+.seller-drop input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.seller-drop strong{font-size:10px}.seller-drop small{font-size:9px;color:#9a94a5}
+.seller-actions{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #e6e0ec;margin-top:36px;padding-top:24px}
+.seller-actions button{font:600 12px Inter,system-ui,sans-serif;cursor:pointer}
+.seller-draft{border:0;background:none;color:var(--violet);padding:12px 18px}
+.seller-submit{min-width:180px;height:48px;border:0;border-radius:12px;background:#6221bf;color:#fff;box-shadow:0 10px 20px #5b21b633}
+.seller-message{min-height:18px;margin-top:14px;font-size:12px;color:#6b42a0}
+body.seller-view main>section:not(#seller),body.seller-view footer{display:none!important}
+body.seller-view .seller{display:block;margin:0;padding-top:96px;min-height:calc(100vh - 84px)}
+
 /* mobile */
 .mob{position:relative;margin-top:150px;height:635px;overflow:hidden;background:linear-gradient(110deg,#2c0c56,#431779)}
 .mob .wrap{max-width:1392px;height:100%;display:grid;grid-template-columns:513px 1fr;gap:64px;align-items:center;padding-left:105px}
@@ -209,8 +247,8 @@ footer h4{font-family:Inter;font-size:12px;font-weight:700;letter-spacing:.12em;
 footer ul{list-style:none;display:grid;gap:13px;font-size:11px}
 footer ul a{transition:color .3s,padding .3s}footer ul a:hover{color:#fff;padding-left:5px}
 
-@media(max-width:1100px){nav,.search{display:none}.hero .wrap{grid-template-columns:1fr;padding:0 28px}.chips,.grid,.cards,.pgrid{grid-template-columns:1fr 1fr}.fam .wrap,.mob .wrap,footer .wrap{grid-template-columns:1fr;padding:0 28px}.pers .in,.nat .in{padding:0 28px}.pers,.nat,.mob{height:auto;min-height:560px}.pers>img{object-fit:fill}.glass{height:auto}.cstage{overflow:hidden}.cur .hide-m{display:none}.brand-row{gap:18px}.brand-tile{width:205px;height:145px}}
-@media(max-width:600px){.brand-row{gap:12px}.brand-tile{width:42vw;height:120px;border-radius:14px}.brands{padding:65px 0 50px}}
+@media(max-width:1100px){nav{display:none}header .wrap{gap:20px}.hero .wrap{grid-template-columns:1fr;padding:0 28px}.shot{margin-top:0}.shot>img{width:100%;max-width:100%}.chips,.grid,.cards,.pgrid{grid-template-columns:1fr 1fr}.fam .wrap,.mob .wrap,footer .wrap{grid-template-columns:1fr;padding:0 28px}.pers .in,.nat .in{padding:0 28px}.pers,.nat,.mob{height:auto;min-height:560px}.pers>img{object-fit:fill}.glass{height:auto}.cstage{overflow:hidden}.cur .hide-m{display:none}.brand-row{gap:18px}.brand-tile{width:205px;height:145px}}
+@media(max-width:600px){header .wrap{padding:0 16px;gap:12px}.logo img{width:112px}.header-cta{height:40px;padding:0 12px;font-size:10px}.brand-row{gap:12px}.brand-tile{width:42vw;height:120px;border-radius:14px}.brands{padding:65px 0 50px}.seller{padding:72px 20px 60px}.seller-form-wrap{margin-top:46px}.seller-form-wrap h3{font-size:22px}.seller-grid{grid-template-columns:1fr;gap:17px}.seller-field.wide{grid-column:auto}.seller-grid>div[aria-hidden="true"]{display:none}.seller-upload{padding:15px}.seller-actions{gap:12px}.seller-submit{min-width:140px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}html{scroll-behavior:auto}.hero h1 .l>span,.fi,.shot>img,.rv{opacity:1!important;transform:none!important}.phones img{opacity:1;transform:none}}
 </style>
 </head>
@@ -228,9 +266,9 @@ footer ul a{transition:color .3s,padding .3s}footer ul a:hover{color:#fff;paddin
 <div id="bar"></div>
 
 <header id="hdr"><div class="wrap">
-  <a class="logo" href="https://telthmart.com/"><img class="brand-logo-img" src="./src/assets/logo.png" alt="Telth Mart"></a>
-  <div class="search"><svg class="i"><use href="#srch"/></svg>Search everything for your life</div>
-  <nav><a href="#depts">All Departments</a><a href="#cur">Popular Picks</a><a href="#pers">AI Shopping</a><a href="#fam">Family Circle</a><a href="#nat">NatLife Organic</a><a href="#aud">For Sellers</a><a href="#mob">Mobile Apps</a><a href="#priv">Privacy</a></nav>
+  <a class="logo" href="./" aria-label="Telth Mart home"><img class="brand-logo-img" src="./src/assets/logo.png" alt="Telth Mart"></a>
+  <nav><a href="#depts">All Departments</a><a href="#cur">Popular Picks</a><a href="#pers">AI Shopping</a><a href="#fam">Family Circle</a><a href="#nat">NatLife Organic</a><a href="#seller">For Sellers</a><a href="#mob">Mobile Apps</a><a href="#priv">Privacy</a></nav>
+  <a class="btn p header-cta" href="https://telthmart.com/">Explore the Marketplace</a>
 </div></header>
 
 <main>
@@ -244,8 +282,7 @@ footer ul a{transition:color .3s,padding .3s}footer ul a:hover{color:#fff;paddin
     <div class="note fi" style="animation-delay:1s"><svg class="i"><use href="#shield"/></svg>Your shopping experience, your choices. Health-data personalization is optional.</div>
   </div>
   <div class="shot" id="shot">
-    <img class="hero-glow" src="./src/assets/dashboard image background glow.png" alt="" aria-hidden="true">
-    <img src="./src/assets/Hero section dashboard image.png" alt="My Life Dashboard on a desktop monitor">
+    <img src="./src/assets/Group 663.png" alt="Telth Mart My Life Dashboard on a desktop monitor">
   </div>
 </div>
 <div class="chips">
@@ -326,9 +363,47 @@ footer ul a{transition:color .3s,padding .3s}footer ul a:hover{color:#fff;paddin
   <h2>Built for Shoppers,<br>Sellers and Brands.</h2>
   <div class="cards">
     <article class="acard rv"><img src="./src/assets/Customer iamge.png" alt="Shopper browsing T Mart on a phone"><small>FOR SHOPPERS</small><h3>Life’s essentials,<br>beautifully together.</h3><p>Discover all-category shopping, curated organic options, family-focused lists and optional personalization.</p><a class="btn" href="https://telthmart.com/">Start Shopping</a></article>
-    <article class="acard rv" style="--i:1"><img src="./src/assets/become seller image.png" alt="Seller giving a thumbs up in a store"><small>FOR SELLERS &amp; MANUFACTURERS</small><h3>Your products.<br>A new audience.</h3><p>Bring your brand to the proposed multi-vendor marketplace with dedicated storefronts and transparent onboarding standards.</p><a class="btn" href="https://telthmart.com/">Become a Seller</a></article>
+    <article class="acard rv" style="--i:1"><img src="./src/assets/become seller image.png" alt="Seller giving a thumbs up in a store"><small>FOR SELLERS &amp; MANUFACTURERS</small><h3>Your products.<br>A new audience.</h3><p>Bring your brand to the proposed multi-vendor marketplace with dedicated storefronts and transparent onboarding standards.</p><a class="btn" href="#seller">Become a Seller</a></article>
   </div>
 </div></section>
+
+<section class="seller" id="seller">
+  <div class="seller-head">
+    <div class="eyebrow">Sell on Telth Mart</div>
+    <h2>Become a Telth Mart Seller</h2>
+    <p>Bring your products to a marketplace built for healthcare, wellness, lifestyle and everyday essentials.</p>
+  </div>
+  <div class="seller-form-wrap">
+    <h3>Tell Us About Yourself &amp; About your business</h3>
+    <p class="intro">Let’s start with your basic contact information.</p>
+    <form id="seller-form" novalidate>
+      <div class="seller-grid">
+        <div class="seller-field"><label for="seller-name">Full Name <i>*</i></label><input id="seller-name" name="fullName" autocomplete="name" placeholder="Enter your full legal name" required></div>
+        <div class="seller-field"><label for="seller-mobile">Mobile Number <i>*</i></label><input id="seller-mobile" name="mobile" type="tel" autocomplete="tel" placeholder="+91 98765 43210" required></div>
+        <div class="seller-field"><label for="seller-email">Email Address <i>*</i></label><input id="seller-email" name="email" type="email" autocomplete="email" placeholder="you@business.com" required></div>
+        <div class="seller-field"><label for="seller-contact">Preferred Contact Method</label><select id="seller-contact" name="contactMethod"><option>Email</option><option>Phone</option><option>WhatsApp</option></select></div>
+        <div class="seller-field"><label for="seller-kind">Seller Type <i>*</i></label><select id="seller-kind" name="sellerType" required><option value="">Select an option</option><option>Brand / Manufacturer</option><option>Distributor</option><option>Retailer</option><option>Service Provider</option><option>Other</option></select></div><div aria-hidden="true"></div>
+        <div class="seller-field"><label for="seller-business">Store / Business Name <i>*</i></label><input id="seller-business" name="businessName" placeholder="Registered business name" required></div>
+        <div class="seller-field"><label for="seller-website">Business Website</label><input id="seller-website" name="website" type="url" placeholder="https:// (optional)"></div>
+        <div class="seller-field"><label for="seller-business-type">Business Type <i>*</i></label><select id="seller-business-type" name="businessType" required><option value="">Select an option</option><option>Healthcare &amp; Medical</option><option>Wellness &amp; Fitness</option><option>Beauty &amp; Personal Care</option><option>Grocery &amp; Food</option><option>Organic Products</option><option>Fashion &amp; Lifestyle</option><option>Home &amp; Electronics</option><option>Other</option></select></div><div aria-hidden="true"></div>
+        <div class="seller-field wide"><label for="seller-description">Business Description <i>*</i></label><textarea id="seller-description" name="description" placeholder="Tell us what your business offers" required></textarea><small class="hint">A short overview of your products and customers.</small></div>
+        <div class="seller-field"><label for="seller-country">Country <i>*</i></label><select id="seller-country" name="country" required><option>India</option><option>United States</option><option>United Kingdom</option><option>Other</option></select></div>
+        <div class="seller-field"><label for="seller-state">State <i>*</i></label><input id="seller-state" name="state" placeholder="State / province" required></div>
+        <div class="seller-field"><label for="seller-city">City / District <i>*</i></label><input id="seller-city" name="city" required></div>
+        <div class="seller-field"><label for="seller-pin">PIN Code <i>*</i></label><input id="seller-pin" name="postalCode" inputmode="numeric" required></div>
+        <div class="seller-field wide"><label for="seller-address">Complete Business Address <i>*</i></label><textarea id="seller-address" name="address" placeholder="Building, street, area and landmark" required></textarea></div>
+        <div class="seller-field wide seller-upload">
+          <div class="seller-upload-head"><span class="seller-upload-icon" aria-hidden="true">▤</span><div><b>Have a large product catalogue with images?</b><small>Upload it once and our onboarding team can review your range. You won’t need to enter every product individually.</small></div></div>
+          <span class="label">Product Catalogue</span>
+          <label class="seller-drop" for="seller-catalogue"><input id="seller-catalogue" name="catalogue" type="file" accept=".pdf,.xls,.xlsx,application/pdf,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"><strong>↑<br>Click to upload or drag and drop</strong><small>PDF, XLS or XLSX up to 20 MB</small></label>
+          <small id="seller-file-name" class="hint" aria-live="polite"></small>
+        </div>
+      </div>
+      <div class="seller-actions"><button class="seller-draft" id="seller-save-draft" type="button">Save as Draft</button><button class="seller-submit" type="submit">Submit</button></div>
+      <p class="seller-message" id="seller-message" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
 
 <section class="mob" id="mob"><div class="wrap">
   <div class="glass"><div class="eyebrow">Mobile Experience Concept</div>
@@ -366,20 +441,25 @@ footer ul a{transition:color .3s,padding .3s}footer ul a:hover{color:#fff;paddin
 
 <footer><div class="wrap">
   <div>
-    <a class="logo" href="https://telthmart.com/"><img class="brand-logo-img" src="./src/assets/footer-logo.png" alt="Telth Mart"></a>
+    <a class="logo" href="./" aria-label="Telth Mart home"><img class="brand-logo-img" src="./src/assets/footer-logo.png" alt="Telth Mart"></a>
     <h3>Your Life. Your Needs.<br><span class="grad">Your Marketplace.</span></h3>
     <p class="about">Powered by TELTH AI. Designed around the real lives of people and families everywhere.</p>
     <p class="mail">info@mytelth.com</p><p class="cp">© 2026 TELTH Mart. All rights reserved.</p>
   </div>
   <div><h4>Explore</h4><ul><li><a href="#depts">All Departments</a></li><li><a href="#cur">Featured Categories</a></li><li><a href="#nat">NatLife Organic</a></li><li><a href="#pers">AI Personalization</a></li></ul></div>
-  <div><h4>Community</h4><ul><li><a href="#fam">My Family Circle</a></li><li><a href="https://telthmart.com/">Become a seller</a></li><li><a href="#mob">Android &amp; IOS</a></li><li><a href="#priv">Privacy by design</a></li></ul></div>
+  <div><h4>Community</h4><ul><li><a href="#fam">My Family Circle</a></li><li><a href="#seller">Become a seller</a></li><li><a href="#mob">Android &amp; IOS</a></li><li><a href="#priv">Privacy by design</a></li></ul></div>
   <div><h4>Connected Ecosystem</h4><ul><li><a href="https://telthmart.com/">MY TELTH</a></li><li><a href="#priv">Privacy Principle</a></li><li><a href="https://telthmart.com/">Support</a></li></ul></div>
 </div></footer>
 
 <script type="module">
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(location.hash==='#seller')document.body.classList.add('seller-view');
+$$('a[href="#seller"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();if(!document.body.classList.contains('seller-view'))history.pushState({seller:true},'','#seller');document.body.classList.add('seller-view');scrollTo({top:0,behavior:'instant'})}));
+$$('a[href^="#"]:not([href="#seller"]):not([href="#"])').forEach(a=>a.addEventListener('click',e=>{if(!document.body.classList.contains('seller-view'))return;const target=a.getAttribute('href');e.preventDefault();document.body.classList.remove('seller-view');history.pushState({seller:false},'',target);requestAnimationFrame(()=>$(target)?.scrollIntoView({behavior:'smooth'}))}));
+addEventListener('popstate',()=>{document.body.classList.toggle('seller-view',location.hash==='#seller')});
 const assetFiles=import.meta.glob([
+  './src/assets/Group 663.png',
   './src/assets/Hero section dashboard image.png',
   './src/assets/dashboard image background glow.png',
   './src/assets/Personalized Shopping Workspace Scene 2.png',
@@ -452,11 +532,21 @@ $('#next').onclick=()=>go(1);$('#prev').onclick=()=>go(-1);place();auto();
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
 $$('.rv,#famimg,#phones').forEach(el=>io.observe(el));
 
+/* ---------- seller enquiry form (visual demo; no data is transmitted) ---------- */
+const sellerForm=$('#seller-form'),sellerMessage=$('#seller-message'),catalogue=$('#seller-catalogue');
+catalogue.addEventListener('change',()=>{
+  const file=catalogue.files[0];
+  if(file&&file.size>20*1024*1024){catalogue.value='';$('#seller-file-name').textContent='The file must be 20 MB or smaller.';return}
+  $('#seller-file-name').textContent=file?file.name:'';
+});
+sellerForm.addEventListener('submit',e=>{e.preventDefault();if(!sellerForm.reportValidity())return;sellerMessage.textContent='This enquiry form is not connected yet. Please visit telthmart.com to submit your seller enquiry.'});
+$('#seller-save-draft').addEventListener('click',()=>{sellerMessage.textContent='Draft saving is not available in this demo.'});
+
 /* ---------- FAQ: one open at a time ---------- */
 $$('details').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)$$('details').forEach(o=>o!==d&&(o.open=false))}));
 
 /* ---------- hero 3D tilt ---------- */
-if(!reduce){const s=$('#shot'),im=s.querySelector('img');
+if(!reduce){const s=$('#shot'),im=s.querySelector('img:not(.hero-glow)');
   s.addEventListener('pointermove',e=>{const r=s.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;im.style.animation='none';im.style.opacity=1;im.style.transition='transform .25s ease-out';im.style.transform=`perspective(1200px) rotateY(${x*7}deg) rotateX(${-y*6}deg)`});
   s.addEventListener('pointerleave',()=>{im.style.transform='none'})}
 
