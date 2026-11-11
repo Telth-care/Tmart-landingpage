@@ -2,25 +2,6 @@ import React from 'react';
 import { ArrowRight, Leaf, ShieldCheck, Zap } from 'lucide-react';
 
 export default function Hero() {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   return (
     <section className="hero-section">
       <div className="container hero-grid">
