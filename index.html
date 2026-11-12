@@ -288,6 +288,57 @@ footer ul a{transition:color .3s,padding .3s}footer ul a:hover{color:#fff;paddin
   .faq{margin-top:80px;padding:42px 18px}.faq .sub{padding:0 6px}.qs{margin-top:32px}.talk{line-height:1.6}
   footer{padding:54px 0 60px}footer .wrap{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 18px;padding:0 20px}footer .wrap>div:first-child{grid-column:1/-1}footer h3{font-size:29px;margin:24px 0 12px}footer h4{font-size:10px;margin:18px 0 14px}footer ul{font-size:10px;gap:11px}footer .about{font-size:10px}
   .seller{padding:80px 18px 52px}.seller-head h2{font-size:30px}.seller-head p{font-size:12px;line-height:1.6}.seller-form-wrap{margin-top:40px}.seller-grid{grid-template-columns:1fr;gap:16px;margin-top:34px}.seller-field.wide{grid-column:auto}.seller-upload{padding:14px}.seller-actions{gap:10px;margin-top:26px;padding-top:18px}.seller-submit{min-width:130px}.seller-draft,.seller-submit{font-size:11px!important}.seller-form-wrap h3{font-size:21px}
+
+  /* Match the narrow Figma frame: eyebrow, artwork, then centered hero copy. */
+  .hero .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:0;padding:0 18px}
+  .hero .wrap>div:first-child{display:contents}
+  .hero .eyebrow{order:1;justify-content:center;text-align:center;font-size:9px;letter-spacing:.13em;margin-bottom:12px}
+  .hero .shot{order:2;width:min(100%,440px);margin:0 auto 8px}
+  .hero .shot>img{width:100%;max-width:100%;transform:none}
+  .hero h1{order:3;font-size:clamp(25px,6.6vw,32px);line-height:1.12;margin:8px auto 0;letter-spacing:-.02em;text-align:center}
+  .hero .lead{order:4;font-size:13px;line-height:1.55;text-align:center;margin:14px auto 0;max-width:430px}
+  .hero .tagline{order:5;font-size:9.5px;text-align:center;margin:14px auto 0}
+  .hero .cta{order:6;display:grid;grid-template-columns:1fr;gap:9px;width:min(100%,270px);margin:20px auto 0}
+  .hero .cta .btn{width:100%;height:42px;font-size:11px}
+  .hero .note{order:7;justify-content:center;text-align:center;margin:14px auto 0;max-width:360px;font-size:9px}
+  .chips{margin-top:22px}
+  .chip{height:58px;padding:0 12px}
+  .chip small{font-size:10px}.chip b{font-size:12px}
+
+  /* The reference stacks the family story before its photo and pairs audience cards. */
+  .fam .img{order:2}
+  .fam .wrap>div:not(.img){order:1}
+  .fam .wrap>div:not(.img){text-align:center}
+  .fam .eyebrow{justify-content:center}
+  .fam .sub{margin-left:auto;margin-right:auto}
+  .fam ol{text-align:left}
+  .fam .ok{justify-content:center;text-align:left}
+  .fam h2{font-size:clamp(27px,7vw,34px)}
+  .fam .img{margin-top:4px}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:0 14px;margin-top:28px}
+  .acard{min-height:0;height:clamp(250px,67vw,310px);padding:15px;border-radius:13px}
+  .acard small{font-size:6.5px}
+  .acard h3{font-size:clamp(15px,4.5vw,19px);margin:10px 0 8px}
+  .acard p{font-size:9px;line-height:1.4}
+  .acard .btn{height:34px;margin-top:12px;padding:0 9px;font-size:9px}
+
+  /* Keep the personalization panel compact and centered like the mobile artboard. */
+  .pers{min-height:0;height:auto;margin-top:68px;padding:46px 0}
+  .pers .in{min-height:0;height:auto;align-items:center;text-align:center;padding:0 22px}
+  .pers .eyebrow{justify-content:center}
+  .pers h2{font-size:clamp(27px,7vw,34px);margin:15px 0 13px}
+  .pers p{font-size:12px;line-height:1.55}
+  .pers .btn,.pers .more{align-self:center}
+  .pers .btn{margin-top:18px}
+  .pers .req{font-size:10px;margin-top:15px}
+  .pers::after{background:rgba(39,8,77,.76)}
+
+  .mob .wrap{gap:22px}
+  .glass{padding:24px 20px}
+  .glass .eyebrow{justify-content:flex-start}
+  .glass h2{font-size:clamp(27px,7vw,32px);margin:16px 0 14px}
+  .phones{width:100%}
+  .priv h2{font-size:clamp(24px,6.2vw,31px)}
 }
 @media(max-width:380px){.header-cta{display:none}.nav-toggle{margin-left:auto}.hero h1{font-size:31px}.dept{height:210px}.dept-info b{font-size:11px}.cstage{min-height:370px}.slide .btn{padding:0 10px}.pc{padding:12px}.pc b{font-size:11px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}html{scroll-behavior:auto}.hero h1 .l>span,.fi,.shot>img,.rv{opacity:1!important;transform:none!important}.phones img{opacity:1;transform:none}}
