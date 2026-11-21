@@ -31,7 +31,11 @@
   margin: 0;
   padding: 0;
 }
-
+@media (max-width: 600px) {
+  .container {
+    width: min(100% - 32px, 1440px);
+  }
+}
 html {
   scroll-behavior: smooth;
   font-family: var(--font-sans);
@@ -378,6 +382,11 @@ input, select, textarea {
 
 .hero-visual {
   position: relative;
+}
+
+.container {
+  width: min(100% - 48px, 1440px);
+  margin-inline: auto;
 }
 
 .hero-card-banner {
