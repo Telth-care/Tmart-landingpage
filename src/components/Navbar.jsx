@@ -1,5 +1,5 @@
-import React from 'react';
-import { ShoppingBag, Search, Store, Sparkles } from 'lucide-react';
+import React, { useState } from 'react';
+import { ShoppingBag, Search, Store, Menu, X } from 'lucide-react';
 
 export default function Navbar({
   cartCount,
@@ -7,6 +7,9 @@ export default function Navbar({
   searchQuery,
   onSearchChange
 }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <>
       <div className="top-banner">
@@ -46,6 +49,33 @@ export default function Navbar({
               <span>Cart</span>
               <span className="cart-count">{cartCount}</span>
             </button>
+            <button
+              className="mobile-menu-btn"
+              type="button"
+              onClick={() => setIsMenuOpen((open) => !open)}
+              aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-navigation"
+            >
+              {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
+        </div>
+        <div id="mobile-navigation" className={`mobile-navigation${isMenuOpen ? ' is-open' : ''}`}>
+          <div className="container mobile-navigation-content">
+            <div className="search-box mobile-search-box">
+              <Search size={18} className="search-icon" />
+              <input
+                type="text"
+                placeholder="Search farm fresh items, bakery, pantry..."
+                value={searchQuery}
+                onChange={(e) => onSearchChange(e.target.value)}
+              />
+            </div>
+            <a href="#products" onClick={closeMenu}>Shop All</a>
+            <a href="#deals" onClick={closeMenu}>Weekly Specials</a>
+            <a href="#reviews" onClick={closeMenu}>Reviews</a>
+            <a href="#locations" onClick={closeMenu}>Store Locator</a>
           </div>
         </div>
       </nav>

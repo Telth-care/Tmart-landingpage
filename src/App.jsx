@@ -115,7 +115,7 @@ export default function App() {
         <Hero />
         <Features />
 
-        <section id="products" className="container" style={{ padding: '24px 20px 48px' }}>
+        <section id="products" className="container" style={{ paddingTop: '24px', paddingBottom: '48px' }}>
           <div className="section-header">
             <div>
               <h2>Fresh Market Catalog</h2>
