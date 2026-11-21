@@ -252,97 +252,7 @@ footer h4{font-family:"Times New Roman",Times,serif;font-size:12px;font-weight:7
 footer ul{list-style:none;display:grid;gap:13px;font-size:11px}
 footer ul a{transition:color .3s,padding .3s}footer ul a:hover{color:#fff;padding-left:5px}
 
-@media(min-width:1500px){
-  /* Keep the composition proportional on very wide monitors and browser zoom levels. */
-  .wrap{width:92vw;max-width:none}
-  header{height:5.25vw}
-  header.s{height:4.25vw}
-  header .wrap{width:92vw;max-width:none;gap:2vw;padding:0}
-  .logo img,.brand-logo-img{width:8vw;height:3.2vw}
-  footer .logo img{width:8vw;height:3.2vw}
-  nav{font-size:.82vw;gap:1.3vw}
-  .header-cta{height:3vw;padding:0 1.5vw;font-size:.78vw;border-radius:.75vw}
-
-  .hero{padding-top:9.7vw}
-  .hero .wrap{width:92vw;max-width:none;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:2vw;padding:0}
-  .hero h1{font-size:3.15vw;max-width:none;margin-top:1.6vw}
-  .hero .lead{font-size:1vw;max-width:30vw;margin-top:1.4vw}
-  .hero .tagline{font-size:.75vw;margin-top:1.1vw}
-  .hero .cta{gap:1.2vw;margin-top:1.8vw}
-  .hero .cta .btn{height:3vw;padding:0 1.2vw;font-size:.8vw}
-  .hero .note{font-size:.65vw;margin-top:1.1vw}
-  .shot{width:100%;margin-top:-1.7vw}
-  .chips{width:92vw;grid-template-columns:repeat(4,minmax(0,1fr));gap:2.5vw;margin:2.5vw auto 0}
-  .chip{height:4.2vw;padding:0 1vw;gap:1vw;border-radius:.8vw}
-  .chip i{width:2.8vw;height:2.8vw;font-size:1.25vw}
-  .chip small{font-size:.75vw}.chip b{font-size:.95vw}
-
-  .depts,.cur,.aud,.priv{padding-top:9vw}
-  h2{font-size:2.8vw}
-  .sub{font-size:.9vw}
-  .grid{width:92vw;grid-template-columns:repeat(5,minmax(0,1fr));gap:5vw 3vw;margin:4vw auto 0;padding:0}
-  .dept{height:18vw;border-radius:1.5vw;padding:1vw}
-  .dept-photo{left:1vw;top:1vw;width:calc(100% - 2vw);height:calc(100% - 2vw)}
-  .dept-info{left:1vw;right:1vw;bottom:.6vw}
-  .dept-info b{font-size:.95vw}.dept-info small{font-size:.62vw}
-  .brands{padding:6vw 0 4.5vw}
-  .brand-row{gap:2.5vw;margin-top:3vw}
-  .brand-tile{width:15.7vw;height:11.2vw;border-radius:1.25vw}
-
-  .pers{margin-top:8vw;height:42vw}
-  .pers .in{max-width:92vw;padding-left:7vw}
-  .pers h2,.nat h2,.glass h2{font-size:2.9vw}
-  .pers p,.nat p.d{font-size:1vw;max-width:30vw}
-  .pers .eyebrow,.nat .eyebrow{font-size:.7vw}
-  .pers .btn,.nat .btn{height:3.2vw;width:15vw;font-size:.85vw}
-  .pers .req,.nat .cert{font-size:.85vw}
-  .cur{padding-top:9vw}
-  .cstage{width:92vw;max-width:none;height:41vw;margin-top:4vw}
-  .slide{width:26vw;height:41vw;margin-left:-13vw}
-  .slide .pic{width:26vw;height:26vw}
-  .slide .card{top:17.3vw;border-radius:0 0 4vw 4vw}
-  .slide .t{top:28.8vw}
-  .slide h3{font-size:1.6vw}.slide p{font-size:1vw}
-  .slide .btn{height:3.2vw;margin-top:1.8vw;padding:0 1.7vw;font-size:.85vw}
-  .arrow{top:32.9vw;width:3vw;height:3vw;font-size:1.3vw}
-  #prev{left:calc(50% - 19vw)!important}#next{left:calc(50% + 16vw)!important}
-
-  .fam{padding-top:9vw}
-  .fam .wrap{width:92vw;max-width:none;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:5vw;padding:0 3vw}
-  .fam .img{height:auto;aspect-ratio:1.24}
-  .fam h2{font-size:2.7vw;margin:1.2vw 0 1.4vw}
-  .fam .sub{font-size:.9vw}.fam ol{margin-top:2.2vw;gap:1vw}
-  .fam li b{font-size:.95vw}.fam li span{font-size:.8vw}
-  .nat{margin-top:9vw;height:36vw}
-  .nat .in{width:92vw;max-width:none;padding-left:7vw}
-  .cards{width:92vw;grid-template-columns:repeat(2,minmax(0,1fr));gap:3vw;margin:4vw auto 0;padding:0}
-  .acard{height:34vw;min-height:0;padding:3vw;border-radius:1.3vw}
-  .acard small{font-size:.65vw}.acard h3{font-size:2vw;margin:1.2vw 0}
-  .acard p{font-size:.78vw}.acard .btn{height:3vw;font-size:.8vw}
-
-  .mob{height:40vw;margin-top:9vw;padding:4vw 0}
-  .mob .wrap{width:92vw;max-width:none;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:4vw;padding:0 3vw}
-  .glass{height:auto;min-height:22vw;padding:2.5vw;border-radius:4vw}
-  .glass .eyebrow{font-size:.7vw}.glass p{font-size:.9vw}
-  .stores{gap:.7vw;margin-top:1.7vw}.stores div{width:9vw;padding:.8vw}
-  .stores small{font-size:.5vw}.stores b{font-size:.8vw}
-  .priv h2{font-size:2.8vw;gap:2vw;margin-top:2.5vw}
-  .priv h2 i{width:4vw;height:4vw;font-size:1.7vw;border-radius:1vw}
-  .priv .sub{font-size:.85vw;margin-top:2.2vw}
-  .pgrid{width:92vw;grid-template-columns:repeat(4,minmax(0,1fr));gap:2vw;margin:4vw auto 0}
-  .pc{height:9vw;padding:1.4vw 1.6vw;border-radius:1.5vw}
-  .pc b{font-size:.95vw}.pc p{font-size:.7vw}
-  .faq{margin-top:8vw;padding:3vw 0}
-  .faq h2{font-size:2.8vw}.faq .sub{font-size:.85vw}
-  .qs{max-width:36vw;margin-top:3vw}summary{height:4vw;font-size:.9vw}.ans p{font-size:.8vw}
-
-  footer{padding:5vw 0 6vw}
-  footer .wrap{width:92vw;max-width:none;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:4vw;padding:0 3vw}
-  footer .wrap>div:first-child{grid-column:auto}
-  footer h3{font-size:2.2vw;margin:2.2vw 0 .9vw}
-  footer h4{font-size:.8vw;margin:4.5vw 0 1.4vw}
-  footer .about,footer ul,footer .mail,footer .cp{font-size:.72vw}
-}
+@media(min-width:1500px){.hero .wrap{max-width:1440px}.hero h1{font-size:50px}.hero .lead{font-size:16px}.chips{gap:clamp(32px,3.2vw,58px)}}
 @media(max-width:1200px){
   header .wrap{gap:18px;padding:0 24px}
   nav{display:none;position:absolute;top:100%;left:0;right:0;margin:0;padding:14px 24px 22px;background:#fff;box-shadow:0 14px 24px rgba(40,10,90,.1);white-space:normal;flex-direction:column;gap:0}
@@ -701,7 +611,7 @@ const C=[["Everyday Grocery Essentials","Fresh produce and considered pantry bas
 const cs=$('#cs');
 C.forEach(c=>cs.insertAdjacentHTML('beforeend',`<div class="slide"><div class="card"></div><div class="pic"><img src="${asset(c[2])}" alt="${c[0]}" loading="lazy" decoding="async"></div><div class="t"><h3>${c[0]}</h3><p>${c[1]}</p><a class="btn" href="https://shop.telthmart.com/">Explore Products</a></div></div>`));
 const sl=$$('.slide');let cur=4,timer;
-function place(){const mobile=innerWidth<=640,wide=innerWidth>=1500,shift=mobile?innerWidth*.68:wide?innerWidth*.33:526,offsetY=mobile?58:wide?innerWidth*.11:174,sideScale=mobile?.58:.65;sl.forEach((s,i)=>{let d=i-cur;if(d>1)d-=sl.length;if(d<-1)d+=sl.length;const on=d===0;
+function place(){const mobile=innerWidth<=640,shift=mobile?innerWidth*.68:526,offsetY=mobile?58:174,sideScale=mobile?.58:.65;sl.forEach((s,i)=>{let d=i-cur;if(d>1)d-=sl.length;if(d<-1)d+=sl.length;const on=d===0;
   s.style.transform=on?'none':`translate(${d*shift}px,${offsetY}px) scale(${sideScale})`;
   s.style.zIndex=on?3:1;s.style.opacity=Math.abs(d)>1?0:1;
   s.querySelector('.card').style.opacity=on?1:0;s.querySelector('.t').style.opacity=on?1:0;s.querySelector('.t').style.pointerEvents=on?'auto':'none'})}
